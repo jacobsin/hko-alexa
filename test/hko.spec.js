@@ -375,7 +375,7 @@ describe('HKO', function () {
         it('returns summary of forecast now', function () {
             expect(formatted).to.eq('Temperature: 16.8 celsius.' +
                 ' Humidity: 85 percent.' +
-                ' Weather forecast for tonight and tomorrow: Mainly <a title="Show in new window" href="javascript:Wxword(\'0003\')">cloudy</a>. <a title="Show in new window" href="javascript:Wxword(\'0446\')">Cool</a> tomorrow morning with a minimum temperature of about 16 degrees. <a title="Show in new window" href="javascript:Wxword(\'0007\')">Sunny periods</a> during the day with a maximum temperature of around 20 degrees. <a title="Show in new window" href="javascript:Wxword(\'0079\')">Moderate</a> easterly winds, <a title="Show in new window" href="javascript:Wxword(\'0081\')">fresh</a> at times.');
+                ' Weather forecast for tonight and tomorrow: Mainly cloudy. Cool tomorrow morning with a minimum temperature of about 16 degrees. Sunny periods during the day with a maximum temperature of around 20 degrees. Moderate easterly winds, fresh at times.');
         });
 
     });
