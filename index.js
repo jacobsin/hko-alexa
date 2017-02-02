@@ -6,7 +6,7 @@ const app = new Alexa.app('hko');
 const HKO = require('./lib/hko');
 
 app.launch(function (req, res) {
-    const prompt = "For Weather Forecast from Hong Kong Observatory.";
+    const prompt = "For Weather Forecast from Hong Kong Observatory. Tell me to forecast now";
     res.say(prompt).reprompt(prompt).shouldEndSession(false);
 });
 
@@ -20,6 +20,11 @@ app.intent('ForecastNow', {
         return false;
     }
 );
+
+app.intent('AMAZON.HelpIntent', function(req, res) {
+    const help = 'For Weather Forecast from Hong Kong Observatory. Tell me to forecast now';
+    res.say(help).reprompt(help).shouldEndSession(false);
+});
 
 //hack to support custom utterances in utterance expansion string
 var utterancesMethod = app.utterances;
